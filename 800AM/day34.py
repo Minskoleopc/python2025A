@@ -69,12 +69,9 @@ info = {
     "balance":1000
 }
 
-
-
 class MyException(Exception):
     def __init__(self,args):
         self.msg = args
-
 
 
 def check(dicts):
@@ -90,8 +87,6 @@ def checkBal(dicts):
             return "pass"
     raise MyException("balance is low")
 
-    
-
 # user define exception
 # try:
 #     check(info)
@@ -103,6 +98,17 @@ try:
     checkBal(info)
 except MyException as obj:
     print(obj)
+
+
+
+# numpy and pandas seaborne matlablib
+# sql and excel 
+# reporting powerBI
+
+# oct 29 
+# prompt engineering 
+# agentic AI
+# git copilot cursor AI
 
 
 
