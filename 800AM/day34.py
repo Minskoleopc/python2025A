@@ -34,16 +34,75 @@
 
 # program 3
 
-try:
-    numA  = input("enter a number")
-    numB = input("enter a number")
-    print(int(numA)/int(numB))
-except ArithmeticError:
-    print("cannot divide by zero")
-else:
-    print("division occured")
-finally:
-    print("i will always execute...")
+# try:
+#     numA  = input("enter a number")
+#     numB = input("enter a number")
+#     print(int(numA)/int(numB))
+# except ArithmeticError:
+#     print("cannot divide by zero")
+# else:
+#     print("division occured")
+# finally:
+#     print("i will always execute...")
 
 # Type of exception in python - inbuilt exception
 # user defined exception
+
+# try:
+#     x = int(input("Enter the number between 5 to 10"))
+#     assert x >= 5 and x <=10
+# except AssertionError:
+#     print("The condition is failed..")
+
+
+# try:
+#     x = int(input("Enter the number between 5 to 10"))
+#     assert x >= 5 and x <=10,"input number is incorrect..."
+# except AssertionError as obj:
+#     print(obj)
+
+# user Defined Exception
+# AssertError , ZeroDivision , indexErr
+
+info = {
+    "fullaName":"amol rao",
+    "balance":1000
+}
+
+
+
+class MyException(Exception):
+    def __init__(self,args):
+        self.msg = args
+
+
+
+def check(dicts):
+    for key in dicts.keys():
+        if key == "balance":
+            return "pass"
+    raise MyException("balance key is not present")
+
+
+def checkBal(dicts):
+    for key,val in dicts.items():
+        if key == "balance" and val> 2000:
+            return "pass"
+    raise MyException("balance is low")
+
+    
+
+# user define exception
+# try:
+#     check(info)
+# except MyException as obj:
+#     print(obj)
+
+
+try:
+    checkBal(info)
+except MyException as obj:
+    print(obj)
+
+
+
