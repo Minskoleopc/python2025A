@@ -102,13 +102,17 @@ except MyException as obj:
 
 
 # numpy and pandas seaborne matlablib
-# sql and excel 
+# sql (mySQL) (MondoDB) and excel 
 # reporting powerBI
 
 # oct 29 
 # prompt engineering 
 # agentic AI
 # git copilot cursor AI
+# DSA
+# e
 
 
-
+# Pragati , Varadraj- MOR 
+# list , dict , tuple , set , function ,str
+# 8 sept
